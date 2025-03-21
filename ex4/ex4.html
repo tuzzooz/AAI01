@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folha de Pagamento</title>
+    <script src="/ex4/ex4.js"></script>
+</head>
+<body>
+
+
+    <style>
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #000000;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin: auto;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2em;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+.funcionario {
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: left;
+    border-left: 5px solid #007bff;
+}
+
+
+    </style>
+
+    <div class="container">
+        <h1>Folha de Pagamento</h1>
+
+        <label for="codigo">Código do Funcionário:</label>
+        <input type="text" id="codigo" placeholder="Digite o código">
+
+        <label for="horas">Horas Trabalhadas:</label>
+        <input type="number" id="horas" placeholder="Digite as horas" min="1">
+
+        <label for="turno">Turno de Trabalho:</label>
+        <select id="turno">
+            <option value="M">Matutino</option>
+            <option value="V">Vespertino</option>
+            <option value="N">Noturno</option>
+        </select>
+
+        <label for="categoria">Categoria do Funcionário:</label>
+        <select id="categoria">
+            <option value="F">Funcionário</option>
+            <option value="G">Gerente</option>
+        </select>
+
+        <label for="salarioMinimo">Salário Mínimo (R$):</label>
+        <input type="number" id="salarioMinimo" placeholder="Digite o salário mínimo">
+
+        <button onclick="calcularSalario()">Calcular Salário</button>
+
+        <h2>Resultado:</h2>
+        <div id="resultado"></div>
+    </div>
+
+
+
+</body>
+</html>

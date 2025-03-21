@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Frete</title>
+</head>
+<body>
+
+    <style>
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #000000;
+    padding: 20px;
+}
+
+.container {
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin: auto;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2em;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+
+    </style>
+
+
+    <div class="container">
+        <h1>Cálculo de Frete</h1>
+
+        <label for="distancia">Distância (km):</label>
+        <input type="number" id="distancia" placeholder="Digite a distância" min="1">
+
+        <label for="quantidade">Quantidade de Peças:</label>
+        <input type="number" id="quantidade" placeholder="Digite a quantidade" min="1">
+
+        <label for="regiao">Selecione a Região:</label>
+        <select id="regiao">
+            <option value="1">Região 1 (Sudeste) - R$ 1,20 por peça</option>
+            <option value="2">Região 2 (Sul) - R$ 1,30 por peça</option>
+            <option value="3">Região 3 (Centro-Oeste) - R$ 1,50 por peça</option>
+        </select>
+
+        <label for="rastreamento">
+            <input type="checkbox" id="rastreamento"> Incluir Rastreamento (R$ 200,00)
+        </label>
+
+        <button onclick="calcularFrete()">Calcular Frete</button>
+
+        <h2>Resultado:</h2>
+        <div id="resultado"></div>
+    </div>
+
+    <script src="/ex3/ex3.js"></script>
+
+</body>
+</html>
